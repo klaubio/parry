@@ -132,6 +132,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Actions",
+            "id": "76fc85fc-597b-496f-8d8e-54508715946d",
+            "actions": [
+                {
+                    "name": "Parry",
+                    "type": "Button",
+                    "id": "1fb8a4bd-1d10-4060-b6f4-f5ffed454769",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "230dce1a-3f5a-470f-9a3d-04ac921ce351",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Parry",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
