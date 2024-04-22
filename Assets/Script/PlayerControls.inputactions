@@ -1,5 +1,5 @@
 {
-    "name": "InputMaster",
+    "name": "PlayerControls",
     "maps": [
         {
             "name": "Movement",
@@ -34,12 +34,12 @@
                 },
                 {
                     "name": "Look",
-                    "type": "PassThrough",
+                    "type": "Value",
                     "id": "2c3a4564-38be-4b62-a985-70646150396d",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [

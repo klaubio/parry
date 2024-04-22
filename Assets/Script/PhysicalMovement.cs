@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
+using UnityEngine.InputSystem;
 
 public class PhysicalMovement : MonoBehaviour
 {
@@ -11,6 +13,9 @@ public class PhysicalMovement : MonoBehaviour
     private float disableGroundDetection;
     [SerializeField] private float fallingGravity =3;
     [SerializeField] private float jumpingGravity = 1;
+ 
+
+
 
 
 
@@ -52,4 +57,7 @@ public class PhysicalMovement : MonoBehaviour
 
         disableGroundDetection = 0.2f;
     }
+
+
+
 }
