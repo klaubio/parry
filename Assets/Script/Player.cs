@@ -14,6 +14,13 @@ public class Player : MonoBehaviour
     [SerializeField] private float sensMouse;
 
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+
     public void Move(InputAction.CallbackContext context)
     {
         float x = Input.GetAxisRaw("Horizontal");

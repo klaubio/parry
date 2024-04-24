@@ -50,7 +50,7 @@ public class PhysicalMovement : MonoBehaviour
 
     public void Jump(float force)
     {
-        if(jumpsCount >2) return;
+        if(jumpsCount >1) return;
 
         velocity.y = force;
         jumpsCount++;
