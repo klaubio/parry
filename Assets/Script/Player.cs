@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float forceJump;
     [SerializeField] private Transform camerar;
     [SerializeField] private float sensMouse;
+   
 
 
     private void Start()
@@ -25,8 +26,9 @@ public class Player : MonoBehaviour
     {
         float x = Input.GetAxisRaw("Horizontal");
         float z = Input.GetAxisRaw("Vertical");
+        Vector3 velocity = Quaternion.Euler(0, camerar.eulerAngles.y, 0) * new Vector3(x, 0, z);
 
-        physicalMovement.Move(new Vector3(x, 0, z) * speedMove);
+        physicalMovement.Move(velocity * speedMove);
     }
 
 
@@ -50,8 +52,6 @@ public class Player : MonoBehaviour
         rotation.x = Mathf.Clamp(rotation.x, -90, 90);
 
         camerar.localEulerAngles += rotation * sensMouse;
-
-
     }
 
 
