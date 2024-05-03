@@ -13,7 +13,9 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform camerar;
     [SerializeField] private float sensMouse;
     [SerializeField] private float upDownRange = 80f;
-   
+
+
+    private Vector3 camAngles ;
 
 
     private void Start()
@@ -50,10 +52,15 @@ public class Player : MonoBehaviour
         rotation.x += -input.y;
         rotation.y += input.x;
 
-        rotation.x = Mathf.Clamp(rotation.x ,-upDownRange, upDownRange);
-        
+        camAngles += rotation * sensMouse;
 
-        camerar.localEulerAngles += rotation * sensMouse;
+
+
+
+        camAngles.x = Mathf.Clamp(camAngles.x, -upDownRange, upDownRange);
+
+
+        camerar.localEulerAngles = camAngles;
 
     }
 
