@@ -1097,7 +1097,7 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_Enabled
     path: Armature/Hips/Spine 1/Spine 2/Spine 3/Right Shoulder/Right Arm/Right Forearm/Right
-      Hand/Cube
+      Hand/Staff
     classID: 65
     script: {fileID: 0}
     flags: 0
@@ -1173,7 +1173,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 350523934
+      path: 2113924972
       attribute: 3305885265
       script: {fileID: 0}
       typeID: 65
@@ -5094,7 +5094,7 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_Enabled
     path: Armature/Hips/Spine 1/Spine 2/Spine 3/Right Shoulder/Right Arm/Right Forearm/Right
-      Hand/Cube
+      Hand/Staff
     classID: 65
     script: {fileID: 0}
     flags: 0

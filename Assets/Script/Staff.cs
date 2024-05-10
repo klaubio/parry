@@ -15,7 +15,7 @@ public class Staff : MonoBehaviour
         {
             other.GetComponent<EnemyAiTutorial>().TakeDamage(damage);
 
-            if (enemy.health <= 0)
+            if (enemy.health < 0)
             {
                 Destroy(other.gameObject);
             }
