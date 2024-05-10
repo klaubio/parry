@@ -412,7 +412,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!195 &218788515
 NavMeshAgent:
@@ -450,22 +450,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 218788515}
   player: {fileID: 1455741278}
+  gun: {fileID: 0}
+  health: 20
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
-  health: 20
-  walkPoint: {x: 0, y: 0, z: 0}
+  walkPoint: {x: 1, y: 0, z: 0}
+  walkPointSet: 0
   walkPointRange: 2
   timeBetweenAttacks: 0.5
+  isDead: 0
+  sightRange: 1.36
+  attackRange: 4.99
+  playerInSightRange: 0
+  playerInAttackRange: 0
+  green: {fileID: 2100000, guid: 945e2f586a1a63a49a99d9080a8e9f24, type: 2}
+  red: {fileID: -1349024910657317225, guid: 81bb9eea30387e442899949a80011e55, type: 3}
+  yellow: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   projectile: {fileID: 5888929538010066859, guid: 4e4330bacbe2ede4eb59edf5f21904be,
     type: 3}
-  sightRange: 5.59
-  attackRange: 0.57
-  playerInSightRange: 1
-  playerInAttackRange: 0
 --- !u!136 &218788517
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -548,7 +554,7 @@ Transform:
   m_GameObject: {fileID: 218788513}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 74.65, y: 5.13, z: 7.31}
+  m_LocalPosition: {x: 74.65, y: 5.13, z: 11.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1664,22 +1670,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 578446362}
   player: {fileID: 1455741278}
+  gun: {fileID: 0}
+  health: 20
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
-  health: 20
   walkPoint: {x: 2, y: 0, z: 2}
-  walkPointRange: 2
+  walkPointSet: 0
+  walkPointRange: 1
   timeBetweenAttacks: 0.5
-  projectile: {fileID: 5888929538010066859, guid: 4e4330bacbe2ede4eb59edf5f21904be,
-    type: 3}
+  isDead: 0
   sightRange: 4
   attackRange: 5
   playerInSightRange: 1
   playerInAttackRange: 0
+  green: {fileID: 2100000, guid: 945e2f586a1a63a49a99d9080a8e9f24, type: 2}
+  red: {fileID: -1349024910657317225, guid: 81bb9eea30387e442899949a80011e55, type: 3}
+  yellow: {fileID: -1349024910657317225, guid: 81bb9eea30387e442899949a80011e55, type: 3}
+  projectile: {fileID: 5888929538010066859, guid: 4e4330bacbe2ede4eb59edf5f21904be,
+    type: 3}
 --- !u!54 &578446364
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1705,7 +1717,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 96
   m_CollisionDetection: 0
 --- !u!1 &641259046
 GameObject:
@@ -1891,7 +1903,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 96
   m_CollisionDetection: 0
 --- !u!195 &756060555
 NavMeshAgent:
@@ -1929,22 +1941,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 756060555}
   player: {fileID: 1455741278}
+  gun: {fileID: 0}
+  health: 20
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
-  health: 20
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 2
+  walkPointSet: 0
+  walkPointRange: 1
   timeBetweenAttacks: 0.5
-  projectile: {fileID: 5888929538010066859, guid: 4e4330bacbe2ede4eb59edf5f21904be,
-    type: 3}
-  sightRange: 1
-  attackRange: 5.86
+  isDead: 0
+  sightRange: 6.9
+  attackRange: 2
   playerInSightRange: 0
   playerInAttackRange: 0
+  green: {fileID: 2100000, guid: 945e2f586a1a63a49a99d9080a8e9f24, type: 2}
+  red: {fileID: -1349024910657317225, guid: 81bb9eea30387e442899949a80011e55, type: 3}
+  yellow: {fileID: -1349024910657317225, guid: 81bb9eea30387e442899949a80011e55, type: 3}
+  projectile: {fileID: 5888929538010066859, guid: 4e4330bacbe2ede4eb59edf5f21904be,
+    type: 3}
 --- !u!136 &756060557
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2217,7 +2235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AgentTypeID: 0
-  m_CollectObjects: 2
+  m_CollectObjects: 0
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
@@ -3530,7 +3548,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!195 &1644435921
 NavMeshAgent:
@@ -3568,22 +3586,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 1644435921}
   player: {fileID: 1455741278}
+  gun: {fileID: 0}
+  health: 20
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
-  health: 20
-  walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 2
+  walkPoint: {x: 1, y: 0, z: 1}
+  walkPointSet: 0
+  walkPointRange: 1
   timeBetweenAttacks: 0.5
-  projectile: {fileID: 5888929538010066859, guid: 4e4330bacbe2ede4eb59edf5f21904be,
-    type: 3}
-  sightRange: 1
-  attackRange: 5.86
+  isDead: 0
+  sightRange: 4.07
+  attackRange: 2.63
   playerInSightRange: 0
   playerInAttackRange: 0
+  green: {fileID: 2100000, guid: 945e2f586a1a63a49a99d9080a8e9f24, type: 2}
+  red: {fileID: -1349024910657317225, guid: 81bb9eea30387e442899949a80011e55, type: 3}
+  yellow: {fileID: 2100000, guid: 172e6d5757c566945aace63133e6ab54, type: 2}
+  projectile: {fileID: 5888929538010066859, guid: 4e4330bacbe2ede4eb59edf5f21904be,
+    type: 3}
 --- !u!136 &1644435923
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3666,7 +3690,7 @@ Transform:
   m_GameObject: {fileID: 1644435919}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68.49, y: 5.13, z: 13.3}
+  m_LocalPosition: {x: 62.67, y: 1.654, z: 13.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3806,7 +3830,8 @@ GameObject:
   - component: {fileID: 1896082635}
   - component: {fileID: 1896082634}
   - component: {fileID: 1896082633}
-  m_Layer: 0
+  - component: {fileID: 1896082637}
+  m_Layer: 6
   m_Name: v (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3899,6 +3924,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1896082637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896082632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35e95dc5ff2b64380880dd7ac5922847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Area: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &1931578159
 GameObject:
   m_ObjectHideFlags: 0
@@ -3912,7 +3953,7 @@ GameObject:
   - component: {fileID: 1931578162}
   - component: {fileID: 1931578161}
   - component: {fileID: 1931578160}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: v (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4138,8 +4179,8 @@ GameObject:
   - component: {fileID: 1999850543}
   - component: {fileID: 1999850542}
   - component: {fileID: 1999850541}
-  - component: {fileID: 1999850540}
   - component: {fileID: 1999850545}
+  - component: {fileID: 1999850546}
   m_Layer: 0
   m_Name: Wood
   m_TagString: Wood
@@ -4147,37 +4188,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1999850540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1999850539}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AgentTypeID: 0
-  m_CollectObjects: 2
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 1
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: bb8d173c77f0444439d57ba35e40e3f4, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!65 &1999850541
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4291,6 +4301,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!208 &1999850546
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999850539}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &2072018748
 GameObject:
   m_ObjectHideFlags: 0
