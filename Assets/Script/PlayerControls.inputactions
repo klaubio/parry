@@ -2,7 +2,7 @@
     "name": "PlayerControls",
     "maps": [
         {
-            "name": "Movement",
+            "name": "Player",
             "id": "c7732cc3-1eca-4b02-9c9f-ddddd87fae1a",
             "actions": [
                 {
@@ -24,15 +24,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Run",
-                    "type": "Value",
-                    "id": "2c8622c6-5ade-442a-bf5f-5e5902c00708",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
                     "name": "Look",
                     "type": "Value",
                     "id": "2c3a4564-38be-4b62-a985-70646150396d",
@@ -40,6 +31,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Dash",
+                    "type": "Button",
+                    "id": "039949c6-adbf-4f77-96a0-abbe9696971d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "65151133-7250-42f7-99de-a5c6aa7099ee",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -51,17 +60,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7458b7ba-7202-45bf-92e7-9c52dae96175",
-                    "path": "<Keyboard>/shift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Run",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -130,32 +128,26 @@
                     "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Actions",
-            "id": "76fc85fc-597b-496f-8d8e-54508715946d",
-            "actions": [
-                {
-                    "name": "Parry",
-                    "type": "Button",
-                    "id": "1fb8a4bd-1d10-4060-b6f4-f5ffed454769",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
+                },
                 {
                     "name": "",
-                    "id": "230dce1a-3f5a-470f-9a3d-04ac921ce351",
-                    "path": "<Mouse>/rightButton",
+                    "id": "f2059b31-cbbf-4ae1-862f-8cd7caf94d02",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Parry",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "27fbb2f9-2534-405a-acd7-4e86bdb47852",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

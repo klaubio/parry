@@ -13,13 +13,21 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform camerar;
     [SerializeField] private float sensMouse;
     [SerializeField] private float upDownRange = 80f;
+    [SerializeField] private float attackCooldown = 1f;
+    [SerializeField] private Animator animator;
+    
 
+    
+    public bool canAttack = true;
+ 
 
-    private Vector3 camAngles ;
-
+    private Vector3 camAngles;
+ 
+   
 
     private void Start()
     {
+     
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -53,15 +61,39 @@ public class Player : MonoBehaviour
         rotation.y += input.x;
 
         camAngles += rotation * sensMouse;
-
-
-
-
         camAngles.x = Mathf.Clamp(camAngles.x, -upDownRange, upDownRange);
 
 
         camerar.localEulerAngles = camAngles;
 
+    }
+
+   
+
+
+    public void Attack(InputAction.CallbackContext context)
+    {
+
+        if(context.started)
+        {
+            OnAttack();
+            Debug.Log("Attack");
+        }
+       
+    }
+
+    public void OnAttack()
+    {
+        canAttack = false;
+        animator.SetTrigger("Attack1");
+        StartCoroutine(ResetAttackCoolDown());
+    }
+
+
+    IEnumerator ResetAttackCoolDown()
+    {
+        yield return new WaitForSeconds(attackCooldown);
+        canAttack = true;
     }
 
 
