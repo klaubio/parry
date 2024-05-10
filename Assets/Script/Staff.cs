@@ -10,18 +10,33 @@ public class Staff : MonoBehaviour
     public void Damage()
     {
         enemy.health -= damage;
-    }
+    }  
 
-
-  
-
-    private void OnTriggerEnter(Collider other)
+     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
             Damage();
+           
+            if(enemy.health <= 0)
+            {
+                Destroy(other.gameObject);
+            }
+
+        }
+
+       
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Wood"))
+        {
+            Destroy(other.gameObject);
         }
     }
+
+
 
 
 

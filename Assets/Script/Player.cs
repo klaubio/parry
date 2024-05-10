@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     [SerializeField] private PhysicalMovement physicalMovement;
+    [SerializeField] private float health;
     public float speedMove;
     [SerializeField] private float forceJump;
     [SerializeField] private Transform camerar;
@@ -27,7 +28,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-     
+        health = 20;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -68,6 +69,16 @@ public class Player : MonoBehaviour
 
     }
 
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if (health <= 0)
+        {
+           //Destroy(this.gameObject);
+        }
+    }
    
 
 

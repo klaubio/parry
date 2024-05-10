@@ -108,7 +108,7 @@ public class EnemyAiTutorial : MonoBehaviour
     }
     private void DestroyEnemy()
     {
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 
     private void OnDrawGizmosSelected()
