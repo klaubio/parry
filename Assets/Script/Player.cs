@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float upDownRange = 80f;
     [SerializeField] private float attackCooldown = 1f;
     [SerializeField] private Animator animator;
+    [SerializeField] private Transform pj;
     
 
     
@@ -33,6 +34,13 @@ public class Player : MonoBehaviour
         Cursor.visible = false;
     }
 
+
+    private void Update()
+    {
+        Vector3 pjEulerAngles = pj.localEulerAngles;
+        pjEulerAngles.y = camerar.localEulerAngles.y;
+        pj.localEulerAngles = pjEulerAngles;
+    }
 
     public void Move(InputAction.CallbackContext context)
     {
